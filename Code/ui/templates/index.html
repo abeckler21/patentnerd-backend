@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Analyzer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f7fa;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .form-container {
+            flex: 0.9;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 12px;
+            margin-top: 60px;
+            min-width: 350px;
+        }
+
+        .results-container {
+            flex: 1.1;
+            margin-top: 60px;
+            padding: 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            min-width: 350px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e1e4e8;
+        }
+
+        .results-container h2 {
+            margin: 0;
+            padding: 18px 25px;
+            background-color: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            border-bottom: 1px solid #e1e4e8;
+            font-size: 1.3rem;
+            color: #2d3748;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 25px 25px 25px;
+        }
+        .results-content h2,
+        .results-content h3,
+        .results-content h4,
+        .results-content h5 {
+            margin-top: 0.6rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+
+        .toc {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e4e8;
+        }
+
+        .toc h4 {
+            font-size: 0.95rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            font-size: 0.85rem;
+            color: #015210;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .toc {
+            display: none;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .analysis-summary {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .summary-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .summary-value {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2d3748;
+        }
+
+        .summary-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .top-buttons a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 1px solid #4CAF50;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+
+        .top-buttons a:hover {
+            background-color: #4CAF50;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .header h2 {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        input, select, button {
+            display: block;
+            margin: 12px 0;
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #3d8b40;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        .highlight-unenforceable {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-left: 4px solid #e53e3e;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-nonrisky {
+            background-color: #f0fff4;
+            padding: 15px;
+            border-left: 4px solid #38a169;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .risk-high {
+            display: inline-block;
+            background-color: #e53e3e;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .risk-medium {
+            display: inline-block;
+            background-color: #dd6b20;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .risk-low {
+            display: inline-block;
+            background-color: #38a169;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .clause-item strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .clause-item p {
+            margin: 8px 0;
+            line-height: 1.5;
+            color: #4a5568;
+        }
+
+        .improvement-guidance {
+            background-color: #ebf8ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            border-left: 3px solid #3182ce;
+        }
+
+        .improvement-guidance strong {
+            color: #3182ce;
+        }
+
+        .analyzing-status {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            color: #4a5568;
+            padding: 20px;
+            justify-content: center;
+            height: 100px;
+        }
+
+        .spinner {
+            animation: spin 1s linear infinite;
+            width: 24px;
+            height: 24px;
+        }
+
+        .ellipsis::after {
+            content: '...';
+            animation: ellipsis 1.5s infinite;
+            display: inline-block;
+            width: 1em;
+            text-align: left;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes ellipsis {
+            0% { content: '.'; }
+            33% { content: '..'; }
+            66% { content: '...'; }
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #a0aec0;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .empty-state img {
+            width: 100px;
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            background-color: #edf2f7;
+            color: #4a5568;
+            border: none;
+            padding: 6px 8px;  /* Reduced padding */
+            border-radius: 4px;
+            font-size: 0.75rem;  /* Slightly smaller font */
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;  /* Changed to inline-flex */
+            align-items: center;
+            gap: 4px;  /* Reduced gap */
+            width: auto;  /* Ensure it doesn't stretch */
+            min-width: 60px;  /* Set minimum width */
+            white-space: nowrap;  /* Prevent text wrapping */
+        }
+
+        .copy-btn svg {
+            width: 12px;  /* Slightly smaller icon */
+            height: 12px;
+            flex-shrink: 0;  /* Prevent icon from shrinking */
+        }
+
+        .copy-btn:hover {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top-center buttons -->
+        <div class="top-buttons">
+            <a href="/about">About</a>
+        </div>
+
+        <!-- Left side - Form -->
+        <div class="form-container">
+            <div class="header">
+                <img src="{{ url_for('static', filename='contractnerds_logo.jpg') }}" alt="Contract Nerd Logo">
+                <h2>Patent Nerd</h2>
+            </div>
+
+            <p class="description">
+                Patent Nerd is designed to help inventors write stronger patents.
+            </p>
+            <p class="description">
+                Upload Patent (PDF):
+            </p>
+
+            <!-- Updated upload button -->
+            <form id="analysis-form" enctype="multipart/form-data">
+                <!-- <label for="patent">Upload Patent (PDF):</label> -->
+                <input type="file" id="patent" name="patent" accept="application/pdf" required>
+
+                <button type="submit">Analyze Patent</button>
+            </form>
+
+            <!-- Table of contents -->
+            <div id="analysis-toc" class="toc">
+                <h4>Table of Contents: </h4>
+                <ul></ul>
+            </div>
+
+        </div>
+
+        <!-- Right side - Results -->
+        <div class="results-container">
+            <h2>
+                Analysis Results
+                <button class="copy-btn" id="copy-results" title="Copy all results">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+                    </svg>
+                    Copy
+                </button>
+            </h2>
+            <div class="results-content">
+                <div id="result">
+                    <div class="empty-state">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZpbGUteCI+PHBhdGggZD0iTTE0LjUgMkg2YTIgMiAwIDAgMC0yIDJ2MTZhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0yVjcuNSIvPjxwb2x5bGluZSBwb2ludHM9IjE0IDIgMTQgOCAyMCA4Ii8+PHBhdGggZD0ibTE0LjUgMTIuNS01IDUiLz48cGF0aCBkPSJtOS41IDEyLjUgNSA1Ii8+PC9zdmc+" alt="Document icon">
+                        <h3>No Analysis Yet</h3>
+                        <p>Upload a patent and click "Analyze" to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("analysis-form").onsubmit = async function(event) {
+            event.preventDefault();
+
+            const patentFile = document.getElementById("patent").files[0];
+
+            // Validate inputs
+            if (!patentFile) {
+                showError("Please select all required fields and upload a patent file.");
+                return;
+            }
+
+            // Prepare form data
+            const formData = new FormData();
+            formData.append("patent", patentFile);
+
+            // Show loading state
+            showLoading();
+
+            try {
+                const response = await fetch("/analyze", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Analysis failed: ${response.status}`);
+                }
+
+                const data = await response.json();
+                displayResults(data);
+
+            } catch (error) {
+                showError(error.message || "An error occurred during analysis. Please try again.");
+                console.error("Analysis error:", error);
+            }
+        };
+
+        function showLoading() {
+            document.getElementById("analysis-toc").style.display = "none";
+            document.getElementById("result").innerHTML = `
+                <div class="analyzing-status">
+                    <svg class="spinner" viewBox="0 0 24 24">
+                        <path fill="#4CAF50" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+                    </svg>
+                    <div>
+                        <div>Analyzing Patent<span class="ellipsis"></span></div>
+                        <div style="font-size: 0.9rem; color: #718096; margin-top: 5px;">
+                            This may take a moment depending on the document size
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showError(message) {
+            document.getElementById("analysis-toc").style.display = "none";
+            document.getElementById("result").innerHTML = `
+                <div class="highlight-unenforceable">
+                    <strong>Error:</strong> ${message}
+                </div>
+            `;
+        }
+
+        function prettifyKey(key) {
+            return key
+                .split("_")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+        }
+
+        function displayResults(data) {
+            document.getElementById("analysis-toc").style.display = "block";
+            const tocList = document.querySelector("#analysis-toc ul");
+            tocList.innerHTML = "";
+            let resultHTML = "";
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    let value = data[key];
+
+                    // 1. Markdown headers → HTML
+                    value = value
+                        .replace(/^#### (.*)$/gm, "<h5>$1</h5>")
+                        .replace(/^### (.*)$/gm, "<h4>$1</h4>")
+                        .replace(/^## (.*)$/gm, "<h3>$1</h3>")
+                        .replace(/^# (.*)$/gm, "<h2>$1</h2>");
+
+                    // 2. Bold
+                    value = value.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                    // 3. Normalize newlines
+                    value = value
+                        .replace(/\n{3,}/g, "\n\n")
+                        .replace(/\n\n/g, "<br><br>")
+                        .replace(/\n/g, "<br>");
+
+                    // 4. REMOVE extra spacing after headers (THIS FIX)
+                    value = value.replace(/<\/h([2-5])>\s*<br><br>/g, "</h$1>");
+
+                    const prettyTitle = prettifyKey(key);
+                    const anchorId = `section-${key}`;
+
+                    resultHTML += `
+                        <div class="analysis-section" id="${anchorId}" style="margin-bottom: 2rem;">
+                            <h3 style="color:#2d3748; margin-bottom: 0.5rem;">
+                                ${prettyTitle}
+                            </h3>
+                            <div style="font-size:0.9rem; color:#4a5568; line-height:1.6;">
+                                ${value}
+                            </div>
+                        </div>
+                    `;
+                    tocList.innerHTML += `
+                        <li>
+                            <a href="#${anchorId}">${prettyTitle}</a>
+                        </li>
+                    `;
+                }
+            }
+
+            document.getElementById("result").innerHTML = resultHTML;
+        }
+
+        // Add copy functionality
+        document.getElementById("copy-results").addEventListener("click", function() {
+            const results = document.getElementById("result").innerText;
+            navigator.clipboard.writeText(results)
+                .then(() => {
+                    const btn = this;
+                    btn.innerHTML = `
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Copied!
+                    `;
+                    setTimeout(() => {
+                        btn.innerHTML = `
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="8" width="12" height="12" rx="2" />
+                                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+                            </svg>
+                            Copy
+                        `;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error("Failed to copy results:", err);
+                });
+        });
+    </script>
+</body>
+</html>

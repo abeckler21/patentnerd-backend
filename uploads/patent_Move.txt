@@ -1,0 +1,2038 @@
+United States Patent 19
+
+Tornetta
+
+5,032,989
+Jul. 16, 1991
+
+[11] Patent Number:
+[45] Date of Patent:
+
+[54] REAL ESTATE SEARCH AND LOCATION
+SYSTEM AND METHOD
+
+Mark A. Tornetta, Plymouth
+Meeting, Pa.
+
+Realpro, Ltd., Plymouth Meeting,
+Pa.
+
+{21} Appl. No.: 342,577
+{22] Filed: Apr. 24, 1989
+
+[75} Inventor:
+
+[73] Assignee:
+
+Related U.S. Application Data
+
+[63] Continuation-in-part of Ser. No. 841,515, Mar. 19,
+1986, Pat. No. 4,870,576.
+
+[ST] Trt, C15 ccc eeeeeeneenenererrersreeees GO6F 15/21
+[S52] U.S. Ch. veces seceeeeeenee teeeaee 364/401; 340/731
+[58] Field of Search ................ 364/401; 340/731, 995;
+434/150
+
+[56] References Cited
+
+U.S. PATENT DOCUMENTS
+3,936,667 2/1976 Loubal ...... sce eseesetsceereteee 364/409
+4,429,385 1/1984 Cichelli et al. .... .. 364/900 X
+4,532,605 7/1985 Wallet .........ccseceeeesceneereee 364/900
+4,553,206 11/1985 Smutek et al. ..... . 364/300
+4,635,136 1/1987 Ciampa et al. ..... --- 358/342
+4,870,576 9/1989 Tormetta o......cecccscseenetescereers 364/401
+FOREIGN PATENT. DOCUMENTS
+
+2105075 3/1983 United Kingdom ................ 364/401
+
+OTHER PUBLICATIONS
+
+Real Estate Agent (software), Albion, Div. of Queue,
+338 Commerce Dr., Fairfield, CT 06430, released
+9/1/86 (abstract only).
+
+“Digitizer Option Introduced With StreetSmart 3.0”,
+
+Computer Shopper, vol. 8, No. 12, Dec. 1988, p. 609
+(abstract only).
+
+“Once-ailing Mindbank Rebounds With New Real
+Estate Package”, Pittsburgh Press (PA), May 24, p. D9
+(abstract only).
+
+“System Technology Develops CD-ROM Map Dis-
+play System”, Comline Computers, Aug. 23, 1989, p. 3
+{abstract only).
+
+“Meitec Develops Network System Connecting Map
+Information System with ISDN”, Comline Telecommu-
+nications, Nov. 8, 1989, p. 4.
+
+“New MAPINFO 4.0: Desktop Mapping on Network”,
+PTS New Product Announcements, News Release May
+10, 1990, p. 1.
+
+“Graphic Real Estate’, Varbusiness, Oct. 1990, p. 16.
+
+Primary Examiner—Jerry Smith
+Assistant Examiner—David Huntley
+Attorney, Agent, or Firm—-Ratner & Prestia
+
+[57] “ABSTRACT
+
+There is provided a method for locating available real
+estate properties for sale, lease or rental using a database
+of available properties at a central location and remote
+stations which use a graphic interface to select desired
+regions on a map of the areas in interest. The user begins
+with a region where they are interested in acquiring
+property and select an inner area within this region by
+using a pointing device such as a mouse to designate
+boundaries on a map displayed on screen. This is then
+zoomed in on and a second area is selected within the
+zoomed region. The second area is then cross-
+referenced with the database of available properties
+whose approximate locations are then pictorially dis-
+played on screen. Information about the properties can
+then be obtained in textual form.
+
+12 Claims, 13 Drawing Sheets
+
+SEARCH WINDOW CENTER TO INDEPENDENCE HALL DISTANCE =1 3.2 miles
+
+huk
+
+Bep Ol
+
+PRESS F10 FOR HELP
+
+Ses.
+£-BS.
+
+Thiladelphia
+
+HELP
+
+PRESS F 10 FOR
+
+S/eqft MN=| MAX=50 SIZE MIN=100 MAX=!0000000 FRESH
+
+PRESS F 10 FOR HELP
+
+CIRCLE CENTER
+TO NOEPENDENCE HALL DISTANCE =10.5m
+
+RADIUS=2.4m SET=12
+
+PRESS F 10 FOR HELP
+
+we
+S/sqft MIN=t MAX=50 SIZE MIN=|00 MAX=10000000 FRESH
+
+U.S. Patent July 16, 1991 Sheet 1 of 13 - 5,032,989
+
+“. 100a 100b 4 100c a
+
+REMOTE REMOTE REMOTE
+
+SYSTEM
+
+SYSTEM
+I Ii
+
+SYSTEM
+I
+
+{2a {2b {2c |
+BUYER INPUT BUYER INPUT BUYER INPUT
+DATA J DATA II DATA III
+; 4c
+
+{4b
+
+14a
+SELLER INPUT
+SELLER INPUT SELLER INPUT DATA III
+DATA T DATA II |
+30 Us
+
+FIG. 1
+
+
+U.S. Patent July 16, 1991 Sheet 2 of 13 - 5,032,989
+
+FIG. 2
+
+200
+
+HOST SYSTEM
+
+230
+
+SEARCH OA
+OF PROPE
+
+USING BUYER'S
+SPECIFICATIONS
+
+TABASE
+ATIES RECEIVE BUYERS
+PROCESSING REQUEST
+
+MAINTAIN
+
+DATABASE
+
+STATISTICAL
+ANALYSIS OF
+
+UPDATE ACCOUNTING
+
+DATA FOR BUYERS
+AND SELLERS
+
+DATABASE AND
+SEARCHES
+
+PREPARE QUTPUT
+, OF SEARCH
+RESULTS
+
+{00
+
+REMOTE SYSTEM SELLER SYSTEM
+
+110
+
+PREPARE AND SENO
+SPECIFICATION OF
+SELLER'S PROPERTY
+
+CREATE BUYER'S
+SEAACH SPEC.
+
+3)
+—
+as.
+m
+
+TRANSMIT BUYER'S
+SEARCH FILE”
+TQ HOST
+
+
+U.S. Patent July 16, 1991 Sheet 3 of 13 ~ 5,032,989
+
+SEARCH WINDOW CENTER TO INDEPENDENCE HALL DISTANCE =I 3.2 miles
+
+PRESS F110 FOR HELP
+PRESS F 10 FOR HELP
+
+gloucester >
+Philadelphia
+
+S/sq ft MIN=I MAX=50 SIZE MIN=100 MAX=| 0000000 FRESH
+
+FIG. 3A
+
+CIRCLE CENTER
+TO INDEPENDENCE HALL DISTANCE =10.5m RADIUS=2.4m SET=12
+
+PRESS F 10 FOR HELP
+~ PRESS FIO FOR HELP
+
+S/sq ft MIN=I| MAX=50 SIZE MIN=100 MAX=10000000 FRESH
+
+FIG. 3B
+
+U.S. Patent July 16, 1991 Sheet 4 of 13 - 5,032,989
+
+{12
+
+—
+em
+
+OBTAIN NEW CENTERL
+AND RADIUS FOR
+DISPLAY CIRCLE ANO
+NEW MIN-MAX LIMITS
+
+118
+
+PROMPT FOR &
+INPUT PROPERTY
+SPECIFICATIONS
+
+FIG. 4 120
+WALTE/OVERMRITE
+SPECIFICATIONS
+TO SAPROP. DAT
+
+{22
+CLOSE SRPROP. DAT
+AND TRANSMIT TO
+HOST SYSTEM
+
+124
+
+U.S. Patent
+
+602
+
+START
+
+July 16, 1991 Sheet 5 of 13 5,032,989
+
+636 610
+
+MAP CENTER
+AND RADUS TO
+NEW CX, CY, RAD
+
+
+U.S. Patent July 16, 1991 Sheet 6 of 13 - 5,032,989
+
+410
+
+FIG. 6 412
+
+INITIALIZE
+
+VARIABLES
+
+414
+
+SCAN FOR
+CURSOR
+KEY
+PRESSED
+
+418
+
+es |
+
+| up-> INCDY |
+| LEFT—> DEG DX |
+: RIGHT—> INC DX |
+
+RESET GLOBAL
+COORDINATES
+FOR DISPLAY
+
+KEY
+PRESSED=
+PGDN?
+
+428
+
+CALCULATE
+BOUNDS
+OF VISRGN
+
+MOVE VISRGN
+TO COINCIDE
+WITH VIEWPORT
+
+U.S. Patent July 16, 1991 Sheet 7 of 13 - 5,032,989
+
+INFORMATION
+START NUMBER
+PROCESSING
+
+136
+‘
+
+PASSWORD
+ENTRY &
+VERIFICATION
+PROCESSING
+
+138
+\
+
+FIG. 7
+
+NAME,
+INFO. NUM.
+PASSWORD
+
+MN
+Qe
+
+OPEN
+FOR WRITE
+144
+
+CLOSE FILES
+
+& ABORT
+
+
+U.S. Patent July 16, 1991 Sheet 8 of 13 — 5,032,989
+
+154
+
+OPEN
+BUYTEL. DAT
+~ FOR READ
+
+DIAL. HOST AND
+WAIT FOR
+CONNECT
+
+DISPLAY
+CONNECTION
+
+ERROR STATUS
+
+MESSAGE
+
+UPLOAD
+BUYTEL. DAT TO
+HOST WITH
+
+WAIT AS HOST
+PROCESSES
+
+
+U.S. Patent
+
+212
+
+214
+
+DELETE ENQUEUE
+OLD PROPERTY
+LISTINGS FROM
+
+DATABASE
+
+216
+
+UPDATE CURRENT
+RECORDS IN
+DATABASE
+
+218
+
+ADD ENQUEVUE
+NEW PROPERTY
+LISTINGS TO
+DATABASE
+
+PROCESS
+ADDITION QUEUE
+AND
+DELETION QUEUE
+
+220
+
+RUN DATABASE
+STATISTICAL
+
+ANALYSIS
+
+222
+
+July 16, 1991
+
+Sheet 9 of 13 5,032,989
+
+nN
+O
+
+21 7)
+
+| VERIFY UPDATE |
+RECORD INDB. |
+ENQUEUE DELETE |
+ENQUEUE ADD_ |
+
+FIG. 9
+
+U.S. Patent July 16, 1991 Sheet 10 of 13 ~- 5,032,989
+
+706 504 +00
+RESET INITIALIZE
+VARIABLES START
+710 712
+BREAKN YES
+DETECTED BROAN STOP
+?
+NO
+DISPLAY
+OPERATING
+PARAMETERS FIG. 10
+ON SCREEN
+230
+
+DOWNLOAD
+FILE REMOTE
+SYSTEM WITH
+
+XMODEM
+PROTOCAL
+
+7356
+
+UPLOAD
+FILE FROM
+
+REMOTE
+SYSTEM
+
+SUMMARY
+DATA
+REPORT
+
+RECIEPT
+
+
+U.S. Patent July 16, 1991
+
+CARRIER
+DETECTED
+?
+
+FIG. 11
+
+Sheet 11 of 13 - 5,032,989
+
+HANG UP PHONE
+LINE AND
+RESET MODEM
+FOR NEXT CALL
+
+U.S. Patent
+
+264
+
+SORT DATABASE
+
+BY PRICE
+
+266
+
+LOCATE FIRST
+PROPERTY
+
+HAVING BUYER'S
+
+MINIMUM PRICE
+
+268
+
+SET POINTER
+TO PROPERTY
+WITH MINIMUM
+PRICE
+
+270
+
+LOCATE LAST
+PROPERTY
+HAVING BUYER'S
+
+MAXIMUM PRICE
+
+272
+
+SET POINTER
+
+TO PROPERTY
+WITH |
+
+MAXIMUM PRICE
+
+274
+
+SCAN FOR
+
+MACHES FROM
+MIN_PTR TO
+
+MAX PTR IN
+DA TAB A
+
+July 16, 1991
+
+Sheet 12 of 13 - 5,032,989
+
+262
+
+START
+
+Nm
+0)
+Oo
+
+FIG. 12
+
+276
+
+275
+
+PRINT OUT
+
+BUYER ID AND
+MATCHED
+
+PROPERTY IDs
+
+YES
+
+277
+
+SAVE
+SELECTED
+SUMMARY DATA
+
+STOP
+
+U.S. Patent
+
+July 16, 1991 Sheet 13 of 13 - 5,032,989
+
+ENTER EXPLICIT
+SELLER LISTING
+AND ACCOUNT
+TERMINATIONS
+
+ADD NEW ACCOUNTS
+TO CUSTOMER
+FILES
+
+DELETE OLD
+(EXPIRED)
+ACCOUNTS FROM
+CLIENT FILES
+
+ENTER NEW
+RECEIPTS | -
+
+CHARGE BUYER
+ACCOUNTS FOR
+PROPERTIES
+LOCATED
+
+FIG. 13
+
+CHARGE SELLER
+ACCOUNTS FOR
+LISTINGS IN
+
+DATABASE
+
+PREPARE
+STATEMENTS AND
+SEND TO CLIENTS
+
+316
+
+5,032,989
+
+1
+
+REAL ESTATE SEARCH AND LOCATION
+SYSTEM AND METHOD
+
+TECHNICAL FIELD
+
+This is a continuation-in-part of application Ser. No.
+841,515 filed Mar. 19, 1986 of common inventorship and
+assignment now U.S. Pat. No. 4,870,576.
+
+The present invention pertains to data processing
+systems for the location of real estate properties for
+purchase through the use of an interactive graphical
+locator interface for developing geographic area indica-
+tions. :
+
+BACKGROUND OF THE INVENTION
+
+Listings of available real estate are typically stored in
+a central computer system, generally referred to as a
+“multiple listing service’. This computer-stored listing
+may be accessed through terminals for retrieval of spe-
+cific information relating to a given property. However,
+search of the stored information is typically dependent
+on the operator’s intricate knowledge of the local area,
+its political subdivisions, and informal housing tract
+designations. Furthermore, such listings are usually
+maintained for each county, and multiple accesses of
+diverse systems are often required for a complete loca-
+tion of all available properties. Finally, no provision for
+searches by multiple criteria, including geographic lo-
+cation is made in prior systems.
+
+THEORY OF THE INVENTION
+
+The system and method of the present invention com-
+prises a host system for maintaining a database of avail-
+able properties, receiving data from both buyers and
+sellers of properties, and searching the database using
+buyer’s criteria. The system and method of the present
+invention also comprises seller and remote systems for
+creating, storing, updating, and transmitting buyer and
+seller data to the host. The system and method of the
+present invention are applicable for residential, com-
+mercial, industrial and other special purpose uses of the
+real estate involving sale, lease or rent. Ail geographic
+location performed by the system of the present inven-
+tion employs a graphical locator interface for specifying
+property locations.
+
+The user can create a property search file by selecting
+the “Create” option from the Main Menu. A viewport is
+displayed and map boundaries are drawn on-screen.
+Inside this display the user can control the position and
+size of a “rubberband” window box. Properties appear
+as dots on the map.
+
+A labeled distance indicator is displayed which calcu-
+lates the distance between the window box center and
+the selected landmark location. The user can change the
+landmark location from a menu of landmarks. The label
+and distance indicator are then updated automatically.
+As the user changes the window box position, the la-
+beled distance indicator changes to reflect the distance
+from the displayed landmark. The user can center the
+window box over the landmark automatically [via the
+home key]. Price and size minimum and maximum indi-
+cators appear below the viewport. The user can change
+the minimum and maximum indicators to refresh the
+points display. Only these property points within. the
+minimum-maximum limits are drawn. The data for these
+points are referred to as the points file. The user can
+change the size of the window box.
+
+10
+
+20
+
+25
+
+30
+
+35
+
+45
+
+50
+
+535 -
+
+65
+
+2
+
+The user can then change the world coordinate dis-
+play to equal the boundaries of the window box. The
+size of the viewport remains constant so that the display
+now appears to have zoomed down closer to earth. Map
+boundary lines are displayed with greater detail and a
+“rubberband” circle is displayed which allows the user
+to enclose a search boundary on the map. The user can
+then either return to the original zoom-up display or
+save the center location and radius values of the rubber-
+band circle.
+
+The labeled distance indicator is redisplayed and now
+calculates the distance between the rubberband circle
+center and the current landmark location. The user can
+change the size of the rubberband circle. A radius indi-
+cator is displayed which calculates the radius of the
+rubberband circle. As the user changes the position and
+size of the rubberband circle, the labeled distance and
+radius indicators are updated to reflect the changes.
+
+Having entered the search location boundary, the
+user is then prompted for the numerical range data
+entries.
+
+Having selected numerical range data values, the user
+is then prompted with a series of menus and asked for
+selections.
+
+When the final menu is displayed and all data entries
+have been successfully entered, the user has successfully
+created a property search file and is returned to the
+Main Menu.
+
+The present invention comprises a system of com-
+puter software for creating and maintaining both a real
+estate property database and a corresponding file of
+hard-copy real estate property listing advertisements,
+and for allowing searches of the database. A “host sys-
+tem” having a database can be searched from “remote”
+computer systems by the use of a public domain soft-
+ware program that is menu driven and includes a graph-
+ical locator interface to specify accurate search location
+boundaries.
+
+The search facility enables a remote user to obtain a
+custom selected portion of the hard-copy property lis-
+ting file without having to obtain the entire file. The
+search facility also enables the user to obtain many
+different custom-selected sets of files from the hard-
+copy property listing file.
+
+The system of the present invention is implemented as
+three main computer systems:
+
+1. A host system which accepts both property listing
+files and property search files from remote locations,
+maintains the property database and performs searches,
+reports system errors, maintains customer accounts, and
+calculates statistics. The host system has:
+
+(a) Download options - news files and points files
+
+(b) Search options - search summaries and custom
+searches
+
+2. A property listing maintenance system which ena-
+
+bles a remote user to create and update a property Hs-
+
+ting file and then transmit it to the host system.
+
+3. A property search maintenance system that enables
+a remote user to create and update a property search file
+and then transmit it to the host system. The system also
+maintains archive files of searches that were already
+processed.
+
+Host Receiving System
+
+The host system polls a standard telephone line while
+waiting for remote data transmissions. When the host
+system receives a call, it brings the telephone line off-
+hook. If a carrier signal is detected, the host system
+
+5,032,989
+
+3
+conforms to the specified communication parameters
+and waits for incoming data.
+
+The host system downloads a data file using an
+XMODEM protocol. (downloads user file with
+XMODEM). See 1. The host system then goes back
+on-hook and polls the telephone line for more calls.
+
+Any data transmission errors of spurious calls occur-
+ring after the host system brings the telephone line
+off-hook causes the host system to hang up and poll for
+more calls.
+
+Maintain
+
+Received data files are placed on queues set up for
+batch processing. A search queue, an addition queue,
+and a deletion queue are all processed for application to
+the property database. When batch processing in the
+host system begins, the host reads the property database
+into memory and processes the deletions queue. Next,
+the addition queue is added to the property database.
+The updated property database is then sorted so that the
+search queue may be processed. When all the search
+processing is complete, the property database is then
+sorted again for filing and over-written to the property
+database file on disk.
+
+Custom Search
+
+The search processing procedure compares property
+data records to the search being processed. Minimum/-
+maximum numerical fields in the property data records
+are checked against the associated numerical ranges of
+the search. Property data menu selections are checked
+against their associated search menu selection arrays.
+The distance from the property data records’ location
+to the search area center location is calculated with the
+distance formula and compared to the search boundary
+radius value. The search processing produces several
+files that are used for further processing. A file of search
+results is produced which contains an identification for
+each search on the search queue plus a list (if any) of the
+properties that were selected in the search. From this
+file, a file of customer mailing labels is produced. An-
+other file is also created which contains a count of the
+number of times each property data record was selected
+during the search processing. This simplifies hard-copy
+duplication tasks and eliminates unnecessary duplica-
+tions.
+
+During the subsequent processing, hard-copy dupli-
+cates are made for materials relating to each property
+selected. The results of each search are collected and
+assembled from the duplicates and labeled for shipping.
+The finished search results are then shipped to custom-
+ers. See 2.
+
+Accounting
+
+Customer accounts are created and maintained by
+separating the customers into two groups—Buyers and
+Sellers. Buyer accounts are used to search the property
+data file while Seller accounts are used for property
+listings.
+
+The Buyer account list contains records with identifi-
+cation data fields and financial resource data fields. The
+Buyer account system interactively prompts for new
+Buyer accounts—automatically assigning serial num-
+bers, and new payment data. The Buyer account list is
+then read into memory from the Buyer account file so
+that new accounts and payments can be added. The
+resource field that accounts for time on the system is
+automatically updated. Buyer account records with
+deficient resource fields are automatically deleted. The
+Buyer account file is then overwritten.
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+45
+
+50
+
+55
+
+65
+
+4
+
+Similarly, the Seller account list also contains records
+with identification data fields plus a resource data field.
+The Seller account system interactively prompts for
+Seller accounts to be terminated, new Seller account-
+s—automatically assigning serial numbers, and new
+payment data. The Seller account list is then read into
+memory from the Seller account file so that new ac-
+counts and payments can be added and terminations
+processed. The resource field that accounts for time on
+the system is automatically updated. Seller account
+records with a deficient resource field are automatically
+deleted. The Seller account file is then overwritten.
+
+A log is written during the accounting process to
+document all entries. It also serves to document any
+automatic processing which may occur.
+
+Both the Buyer and Seller accounting systems pro-
+duce receipt files which are printed to inform the cus-
+tomer of the results of processing. Serial numbers and
+payment receipts are issued in this manner. Seller termi-
+nations receipts are also issued in this manner.
+
+Statistics
+
+The host system calculates statistics by reading the
+property data file into memory and traversing the prop-
+erty database. Minimum, maximum, count, percentage,
+mean, and standard deviation statistics are then calcu-
+lated where applicable and written to a file with all
+statistics being clearly labeled. This file includes special
+printer functions so that a neat and organized report can
+be printed. Price, size, X, and Y data are written to the
+points file.
+
+A system check routine is included to track potential
+errors in both the Buyer and Seller accounting systems.
+In the Seller accounting system, the Seller account file
+is checked against the property database and the errors
+are reported. In both the Buyer and Seller accounting
+systems, accounts with deficient resources are also re-
+ported.
+
+Property Listing File Program
+
+The Property Listing File Program is used to create,
+maintain, and transmit property listing files to the host
+system. It interactively prompts for entries, is error
+trapped, and requires no previous knowledge about
+either the remote or host systems.
+
+The user can create a property listing file by selecting
+the “Create” option from the Main Menu. A viewport is
+displayed and map boundaries are drawn on screen.
+Inside this display, the user can control the position of a
+rubberband window box.
+
+The user may then change the world coordinate dis-
+play to equal the boundaries of the window box. The
+size of the viewport remains constant so that the display
+now appears to have zoomed down closer to earth. Map
+boundary lines with erasable labels are displayed with
+greater detail and a movable crosshair cursor is dis-
+played which allows the user to pinpoint a location on
+the map. The user can then either return to the original
+zoom-up display or save the location of the crosshair
+cursor.
+
+Having selected a location, the user is then prompted
+for the address of the property. The user must enter an
+address. ‘
+
+Having entered the address, the user is then prompted
+for numerical property data entries. If an invalid value
+is entered the user is again prompted for the same input.
+
+Having entered the numerical property data entries,
+the user is then prompted for tracking directions to the
+property. If an invalid value is entered, the user is
+prompted for the same input.
+
+5,032,989
+
+5
+
+Having selected numerical property data values, the
+user is then prompted with a series of menus and asked
+for selections. If an invalid ment selection value is en-
+tered the user is again prompted for the same input.
+
+When the final menu is displayed and all data entries
+have been successfully entered, the property listing data
+is over-written to a disk file. The user has successfully
+created a property listing file and is returned to the
+Main Menu.
+
+From the Main Menu the user can then choose to
+update the property listing file currently on disk. By
+selecting the “Display/Update”’ option the property
+listing data is read into memory and the Display/Up-
+date menu is displayed to allow the user to update either
+the location, address, numerical or menu data sections
+separately. When the user is finished editing a section,
+he is returned back to the Display/Update menu to
+allow him to edit another section.
+
+The traveling directions update procedure displays
+the property address data and allows the user to edit
+each portion of the address separately. After editing a
+portion of the traveling directions, the entire traveling
+directions are redisplayed. When the user is satisfied
+with the address data, he is returned to the Display/Up-
+date menu.
+
+The location update procedure is identical to the
+property listing map/location interface described previ-
+ously.
+
+The numerical data update procedure displays the
+numerical data and allows the user to edit each portion
+separately. After editing a portion of the numerical
+data, the numerical data is redisplayed. When the user is
+satisfied with the numerical data, he is returned to the
+Display/Update menu.
+
+The menu data update procedure displays the menu
+data and allows the user to edit each portion separately.
+After editing a portion of the menu data, the menu data
+is redisplayed. When the user is satisfied with the menu
+data, he is returned to the Display/Update menu.
+
+When the user is satisfied that the property listing file
+is complete, he can select the “Print” option from the
+Main Menu to print the Property Listing File. The
+property listing data is read into memory and copied to
+the printer with each value clearly labeled. When the
+printing is compieted, the user is returned to the Main
+Menu.
+
+The completed property listing file may be transmit-
+ted to the host system by selecting the “Send” option
+from the Main Menu. The user is then prompted for
+account identification data. The property listing file is
+read into memory and the account identification data
+added to it. All dialing and communications parameters
+are set automatically and the program takes the remote
+system off-hook and dials the host system. The remote
+system then waits for a carrier tone. If no carrier is
+present the remote system times-out and returns a diag-
+nostic error message to the user. If a problem exists with
+the remote system while off-hook, the program brings
+the system back on-hook and displays a diagnostic error
+message or aborts processing.
+
+If the remote system receives a carrier tone from the
+host system, the connection is established and the re-
+mote system uploads the property listing file to the host
+system using the XMODEM protocol. The remote
+system then waits for a diagnostic message from the
+host system and displays the message to the user. The
+program then brings the telephone line back on-hook
+and returns the user to the Main Menu.
+
+5
+
+10
+
+15
+
+2
+
+°o
+
+25
+
+30
+
+35
+
+45
+
+50
+
+55
+
+60
+
+65
+
+6
+
+Property Search File Program
+
+The Property Search File Program is used to create,
+maintain, and transmit property search files to the host
+system. It interactively prompts for entries, is error
+trapped, and requires no previous knowledge about
+either the remote or host systems.
+
+From the Main Menu the user can then choose to
+update the property search file currently on disk. By
+selecting the “Display/Update” option ‘the property
+search data is read into memory and the Display/Up-
+date menu is displayed to allow the user to update either
+the location, numerical ranges or menu data sections
+separately. When the user is finished editing a section,
+he is returned back to the Display/Update menu to
+allow him to edit another section. When the user is
+finished updating the property search data, the property
+search data is over-written to the disk file and the user
+is returned to the Main Menu.
+
+The location update procedure is identical to the
+search location map interface described previously.
+
+The numerical range data update procedure displays
+the numerical range data and allows the user to edit
+each portion separately. After editing a portion of the
+numerical range data, the numerical range data is redis-
+played. When the user is satisfied with the numerical
+range data that is displayed, he is returned to the Dis-
+play/Update menu.
+
+The menu data update procedure displays a category
+menu to allow the user to edit each portion of the menu
+data separately. After editing a portion of the menu
+data, the menu data is redisplayed. When the user is
+satisfied with the menu data, he is returned to the Dis-
+play/Update menu.
+
+When the user is satisfied that the property search file
+is complete, he can select the “Print” option from the
+Main Menu to print the Property Search File. The
+property search data is read into memory and copied to
+the printer with each value clearly labeled. When the
+printing is completed, the user is returned to the Main
+Menu.
+
+The completed property search file may be transmit-
+ted to the host system by selecting the “Send” option
+from the Main Menu. The user is then prompted for
+account identification data, search name data, baud rate
+data, and dialing prefix data. The property search file is
+read into memory and this data is added to it. The re-
+maining communications parameters are set automati-
+cally and the program takes the remote system off-hook
+and dials the host system. The remote system then waits
+for a carrier tone. If no carrier is present the remote
+system times-out and returns a diagnostic error message
+to the user. If a problem exists with the remote system
+while off-hook, the program brings the system back on
+hook and displays a diagnostic error message or aborts
+“processing.
+
+If the remote system receives a carrier tone from the
+host system, the connection is established and uploads
+the request to the host system. After waiting for pro-
+cessing, it downloads the results. The program then
+brings the telephone line back on-hook and returns the
+user to the Main Menu.
+
+BRIEF DESCRIPTION OF THE FIGURES
+
+FIG. 1 is an overall block diagram of a system typical
+of the present invention.
+
+FIG. 2 is a functional block diagram of the system of
+the present invention.
+
+5,032,989
+
+7
+
+FIG. 3A is a depiction of a map generated on a CRT
+according to the present invention.
+
+FIG. 3B is a map showing greater detail and dis-
+played on a CRT according to the present invention.
+
+FIG. 4 is a flow diagram of the procedure create
+buyers search specification file.
+
+FIG. 5 is a flow diagram of the procedure obtained
+new center and radius for display circle.
+
+FIG. 6 is a flow diagram of a generalized procedure
+for the zooming of the map display of the present inven-
+tion.
+
+FIG. 7 is a more detailed flow diagram of the proce-
+dure close SRPROP.DAT and upload data to host
+system.
+
+FIG. 8 is a more detailed flow diagram of the proce-
+dure upload request to host computer and prompt for
+CR.
+
+FIG. 9 is a flow diagram of the procedure maintain
+data base.
+
+FIG. 10 is a flow diagram of the procedure receive
+buyers search specifications.
+
+FIG. 11 is a flow diagram of the procedure receive
+file from remote system and acknowledge.
+
+FIG. 12 is a flow diagram of the procedure search
+data base of properties using buyers specifications.
+
+FIG. 13 is a flow diagram of the procedure update
+accounting data for buyers and sellers.
+
+DETAILED DESCRIPTION
+
+Referring now to FIG. 1, there is shown an overview
+block diagram of the entire system of the invention
+which includes a host computer system 200 which is
+connected by telecommunications links 20 to a plurality
+remote computer systems 100A, 100B and 100C. Host
+system 200 maintains a database of property listings 202
+which contains a plurality of property listings submitted
+by those with properties to sell, lease or rent. The data-
+base is used for search and delivery of relevant property
+information to those inquiring of the system with cer-
+tain specifications to be described later. Host system 200
+also maintains a set of client accounts 204, one account
+per client (either a buyer or seller). Charging for the use
+of the system is based upon a continual update of these
+client accounts. Host system 200 also uses a mail service
+30 such as the U.S. mail service (but not limited thereto)
+for communication and billing purposes. Each remote
+system, 100A, 100B and 100C, is capable of interrogat-
+ing the database 202 by communicating a set of specifi-
+cations for a desired property to be purchased to host
+system 200. These specifications are derived from buyer
+input data 12A, 12B and 12C. The buyer input data is
+interactively gathered from the buyer by the remote
+system, formatted, and transmitted with an error-check-
+ing protocol to the host system. The host system either
+processes the search data (also points files and news
+files) on-line and returns a summary result or batches
+the interrogation requests for subsequent processing
+off-line. Similar to the communications functions by
+host system 200, communications also occur with sellers
+and remote system operators through mail service 30.
+
+Referring now to FIG. 2, there is shown a procedural
+overview block diagram of the present invention. The
+system 10 of the present invention comprises three prin-
+cipal components, host system 200, remote system 100,
+and seller system 500. It will be understood that al-
+though only one seller system 500 is shown, a plurality
+of such systems exist and interface to host 20 . Similarly,
+although only one remote system 100 is shown a plural-
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+45
+
+65
+
+8
+
+ity of such systems exist and interface to host 200. The
+procedural components of host system 200 include
+maintain database procedures 210, search database pro-
+cedures 260 receive buyers search specification proce-
+dures 230, prepare output of search result procedures
+280, statistical analysis procedures 290 (which includes
+generation of the points file which consists of X, Y,
+price and size data values for each property), and ac-
+counting procedures 300.
+
+Maintain database procedures 210 first deletes listings
+that are no longer of use and then adds new listings to
+the database. The source of new properties in the data-
+base is seller system 500 wherein complete specifica-
+tions are prepared and delivered to host system 200
+through a variety of means. Database maintenance pro-
+cedures 210 also include an additional amount of infor-
+mation added through a location system for new prop-
+erties to be described later.
+
+Database search procedures 260 include an applica-
+tion of buyer search specifications to the database. The
+receiving of buyer search specifications is conducted
+via telecommunications link 20 depicted in FIG. 1.
+Remote systems according to the present invention are
+interfaced via a modem or other such telecommunica-
+tions device to host system 200 which controls its own
+telecommunications line and receives :nformation from
+remote systems with validation and error-checking
+procedures. On receipt of such valid information a
+search specification is built within host system 200 and
+is queued for later processing during an off-line period
+in the host. Receipt of a buyer specification file is ac-
+knowledged to the remote system and a status message
+is delivered prior to termination of the telecommunica-
+tions link. The output of a database search, if successful,
+is either a summary of the property record or will in-
+clude a listing of a given buyer identification number
+followed by the serial numbers of those property lis-
+tings in the database which fall within the range of
+specification created by the buyer. This listing which
+pairs buyers with located properties then permits fur-
+ther processing in host system 200.
+
+The output listing from host system 200 is stored in
+three files. The first file is the identification of the search
+which identifies the actual buyer, the search name, and
+the serial numbers of any properties which have been
+selected. In addition, a list of mailing labels is created
+with the names and addresses of the buyers for whom
+searches have been performed. This list of mailing labels
+is created by referencing the buyer identification num-
+ber against the host system accounting files.
+
+Another procedure in host system 200 counts the
+number of times each property listing serial number was
+selected during batch processing and writes that infor-
+mation to a file, Subsequently duplicates of the individ-
+ual property advertisements are made. Then, during
+further processing, the searches are collected from
+these duplicates and placed with the printed search
+results into an envelope with the corresponding mailing
+label and shipped to the buyer.
+
+Another function of host system 200 is accounting
+functions 300. These accounting functions include
+charging for services rendered to both sellers and buy-
+ers. Sellers are charged by the number of days that their
+property advertisement is listed in the database. The
+buyer is charged by the search. The type of search can
+involve varying costs.
+
+Typically the charge to buyers is done on a declining
+balance arrangement, wherein a minimum charge of a
+
+5,032,989
+
+9
+
+certain number of requests is applied regardless of the
+outcome of any search, including invalidity of search
+data.
+
+Yet another function of host system 200 is statistical
+analysis functions 290. Statistical analysis may occur on
+the total contents of the database at any given time, the
+average contents of the database over a longer period of
+time, or statistical analysis may be performed to detail
+the nature of search specifications being transmitted to
+host system 200. X, Y price & size points file is written.
+
+There are three basic types of variables used in the
+system of the present invention: (1) numerical; (2) array
+or menu selection; and (3) floating point location. Aver-
+age minimum, maximum and standard deviation is com-
+puted for numerical data. Finally a count of the number
+of property listings in the database and a percentage of
+those with a mortgage, and an average mortgage rate
+are calculated. A second major component of system 10
+is remote system 100. Remote system 100 is comprised
+of two principle sub-systems: create search specification
+file 110 and transmit search file 150. Create search speci-
+fication file 110 is the module seen by potential buyers
+of properties wishing to interrogate host system data-
+base 202. The unique user interface incorporated within
+module 110 includes a graphical locator which permits
+precise location of desired area for property purchase
+with reference to a global coordinate system. This loca-
+tion is selected through the use of manipulator keys or
+pointing devices such as a mouse, light pen or other
+known devices which allow positioning of a graphical
+interface selector in order to locate both property loca-
+
+tion and distance specifications without resort to nu--
+
+meric data on the part of the user.
+
+From the main on-screen menu, the user selects the
+create option. The system displays the graphical locator
+interface which draws a map on the display (shown in
+FIG. 3A) with points indicators. Superimposed over
+the map is a window box that is non-destructive. The
+user has control of the position and size of the window
+box through a set of keys or locator. Also on-screen is a
+distance indicator which calculates the distance in miles
+from the center of the window box to a changeable
+landmark location on the map. The user can display a
+list of landmarks; change the selected landmark and the
+actual display is automatically updated. The landmark is
+also labeled on the map. The minimum/maximum indi-
+cators appear below the viewpoint. These indicators
+can be changed so that when refreshed, only those
+points whose price and size are within the minimum/-
+maximum limits are displayed. The user can also auto-
+matically center the window box over the current land-
+mark. After selecting the landmark, moving the win-
+dow box, and selecting its size, the user activates a key
+sequence to “zoom” the display. In other words, the
+viewport will then display the actual boundaries of the
+window box so that display appears to have zoomed
+down closer to earth (shown in FIG. 3B). A “rubber
+band” circle then appears which is normalized to the
+size of the viewport. The user may move this circle on
+the display and also change its size. There is displayed a
+radius indicator indicating the actual radius of the circle
+in miles along with a corresponding distance indicator
+from the specified landmark. Once the user has selected
+his search boundary by selecting an appropriate circle,
+that data may be saved or changed.
+
+After saving the location data, the user is prompted
+for numerical range data, such as minimum and maxi-
+mum price for the target listing. After having selected
+
+20
+
+25
+
+35
+
+40
+
+45
+
+50
+
+55
+
+60
+
+65
+
+10
+several numerical ranges, a series of menus are dis-
+played so that the user may select one or several selec-
+tions on each menu.
+
+After the completion of the questioning cycle, all
+data entered by the user is stored as a search specifica-
+tion. The user is then allowed to print hard copy of the
+search specification prior to subsequent transmission of
+the search specification to the host system. A second
+procedure allows editing of a previously created search
+specification. This process termed “update” presents a
+list of the parameters entered by the user and allows any
+given parameter to be modified, subsequently re-saving
+the data and again presenting menu choices for trans-
+mission to the host, further update, and creation.
+
+After creation and validation of search specifications
+and approval of the final specification by the buyer,
+such specification is transmitted via telecommunica-
+tions links 20 to host system 200 for application to the
+database. After database search, results are prepared as
+previously described and are transmitted or mailed back
+to the potential buyer for his use.
+
+A final component of system 10 is seller system 500,
+which comprises preparation of a property specification
+510. Such a property specification contains the same
+data which is interrogated by a potential buyer, but such
+data is definite and not in ranged numerical form. This
+is obvious since a seller generally only has a fixed num-
+ber of, for instance bedrooms in his house, and would
+not necessarily specify that he has a house containing 2
+to 4 bedrooms. After preparation of a seller specifica-
+tion for a property, that information is transmitted to
+host system 200 and used in database maintenance for
+entry of new property information into the database.
+After entry, such new property information becomes
+available for search by all buyers.
+
+Referring now to FIG. 4, there is shown a detailed
+flow chart for Create Specification Procedure 110,
+which is part of remote system 100. Create Specifica-
+tion Procedure 110 begins at the block labeled start 112
+and proceeds to initialize the various memory locations
+and variables required for its own internal processing at
+block 114. After initialization, the procedure obtains a
+new center and radius (location information), and price
+and size information from the user at 116. Obtaining
+location information will be described more fully here-
+inafter. After locating a desired search boundary, the
+system prompts for and receives input regarding vari-
+ous specifications of a property at 118. Such specifica-
+tions include ranges for price, lot size (in minimum/-
+maximum indicators), number of bedrooms, and other
+numerical data, as well as menu selections for home
+style, sewage system, roof type, and other such housing
+elements. After receiving and validating all such infor-
+mation, a specification file labeled SRPROP.DAT is
+written to a mass storage device for saving until future
+processing can commence at 120. Finally, the file so
+written is transmitted to host system 200 at block 122
+and processing to create a property stops at stop block
+124. Block 122 is depicted on FIG. 2 as block 150,
+“transmit buyer’s search file to host.”
+
+Referring now to FIG. 5, there is shown a more
+detailed view of procedures required for obtaining new
+center and radius for property location purposes shown
+as block 116 on FIG. 4. The procedures for obtaining a
+new radius and center depend upon the creation of a
+scaled map (shown in FIGS. 3A,B) of the target area
+over which the database contains properties. This map
+is generated on a display screen for use by the user.
+
+5,032,989
+
+11
+Procedure 116 begins at start block 602 and initializing
+its own variables in order to begin processing. Such
+
+variables are local in scope and do not interfere with .
+
+initialization processing conducted by the calling rou-
+tine at 114.
+
+Control travels from start block 602 to block 604,
+where it is seen that the variables are initialized. After
+the variables are initialized, the world coordinates are
+set to their maximum values in block 606. Next, the
+points file must be read into memory from the down-
+loaded points file sitting in the user’s disk storage me-
+dium, as shown in block 608.
+
+Control then proceeds to decision block 610, where it
+is determined whether the user has completed his loca-
+tion boundary selection. If the user has completed this
+selection, control proceeds to block 636, where it is
+shown that the center and radius coordinates for the
+map are changed to the new center and radius coordi-
+nates, just selected. Then, the data values corresponding
+to the min and max indicators displayed on the screen
+are saved to a disk file. Then the procedure stops at
+block 640. If the user has not completed his boundary
+location selection, processing proceeds from decision
+block 610 to block 612, where the last selected (most
+current) world coordinates are retrieved from memory.
+These world coordinates are then used in block 614 to
+redisplay the map through the fixed viewport. The
+points file is then drawn, as shown in block 616. The
+min/max indicators, which are displayed on screen, are
+set in block 617.
+
+In decision block 618, it is determined whether the
+min/max indicators have changed. If they have, the
+points file is erased in block 622. A “filter” is used to
+eliminate points not within the limits of the min/max
+indicators set in block 617. In this way, when control
+leaves block 620 to block 616, only the new points
+within the set min/max indicators will be redrawn. If it
+is determined at decision block 618 that the min/max
+indicators have not been changed, control proceeds to
+decision block 624.
+
+At decision block 624, an evaluation of the variable
+“DONE” is performed. If DONE is equal to 0, this is
+indicative of the fact that the user wishes to zoom the
+display downward, that is, obtain a more detailed view
+of a smailer area of the map, and zoom down procedure
+628, described more fully hereinafter, is executed. In the
+event that done is not equal to 0, evaluation 626 checks
+whether done is equal to 2. If it is, this is an indication
+that the user wishes to zoom up, that is, view a larger
+area of the map with correspondingly less detail, also
+described hereinafter. In the event that done is not equal
+to O or 2 as determined in decisions 624 and 626, pro-
+cessing continues by looping to execute decision 610 to
+determine whether the user has indicated that he is
+finished with the property location selection procedure.
+If the user is finished, as indicated at decision 610, the
+new center and radius of the selected region are stored
+in variables indicative of the center CX and CY and
+indicative of the radius RAD and processing terminates
+at stop operation 640.
+
+Operations 628 zoom-down and 630 zoom-up are
+depicted as a general procedure type in FIG. 6 as zoom
+view system 400. Processing begins at start block 410
+and proceeds through a local initializaticn of variables
+at block 412. ;
+
+After variable initialization, actual key strokes and
+locator position are monitored by the program so that
+the initialized position variable can be incremented or
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+45
+
+50
+
+55
+
+65
+
+12
+
+decremented to change the size or location of the circle
+or window box. All corresponding variables that are
+associated with the center locations are updated with
+these incremental values.
+
+In the specific case of operation of the remote system
+on an IBM personal computer. Various special keys
+located on the cursor key pad are indicative of desired
+functionality within the zooming procedures. For in-
+stance the plus (+) symbol key is indicative of the users
+desiring a zoom-out operation while the minus (—)
+symbol key is indicative of the users desiring to zoom-in
+the display. The cursor keys, left arrow, right arrow, up
+arrow, and down arrow, move the center location of
+the viewing selection region (whether a rectangle or a
+circle) in directions corresponding to north, south, east,
+and west. The page down (PgDn) key actually executes
+a selected zoom by changing the world coordinate sys-
+tem to match the view selector. The page up (PgUp)
+key resets the world coordinate system to its maximum,
+thus zooming out. After the selection of zoom mode and
+function, the bounds of the region which is to be visible
+on the screen, are calculated at operation 420. Decision
+422 indicates whether the user has attempted to move
+the window box past the bounds of the viewport. If
+such an attempt has been determined at decision 422,
+operation 424 resets the incremental step value applied
+to the location variable to 0 to prevent further move-
+ment of the window box. Processing then loops and
+continues at scan for cursor key operation 414.
+
+In the special case of the actuation of the page down
+(PgDn) key, detected in operations 416 and 418, and
+compared for in decision 419, the indication that the
+user is satisfied with the new coordinates of the window
+box results in operation 426 wherein the global coordi-
+nates are reset to the parameters defined for the new
+window box. Processing then terminates at stop opera-
+tion 428.
+
+Close and transmit operation 122 of system 110 is
+detailed more fully in FIG. 7 which depicts system 122,
+prepare to transmit search file to host. FIG. 7 depicts
+the preparation of the search file for transmission which
+commences operation at start block 124 and proceeds to
+process the information number which is indicative of
+the particular buyer using the system at 134. At 136, the
+user is prompted to enter a password and that password
+is verified for its format.
+
+At I/O operation 138, the search name information
+number and password are read and, if valid, at block 140
+a file “SUYTEL.DAT” is opened for writing. Decision
+142 verifies that the previously created SRPROP.DAT
+file exists. If the file does not exist, no search data is
+available and no branch is taken to operation 144 which
+closes all files and aborts the transaction because of a
+lack of search data. Assuming such search data exists,
+the data is copied from SRPROP.DAT to BUYTEL.-
+DAT at operation 146. Processing then proceeds to
+transmitting the data at operation 150, and then termi-
+nates at stop block 152.
+
+Referring now to FIG. 8, there is shown a more
+detailed flow chart of the operations of transmission
+operation 150. Transmission operation 150 commences
+operation at start block 154. At operation 156, the previ-
+ously created BUYTEL.DAT file is open for read, and
+at block 158 the modem is instructed to dial the tele-
+phone to the host system 200 and wait for verification of
+connection with that system. At decision 160, a verifica-
+tion of correct connection parameters is made. If the
+connection is incorrect due to telecommunications net-
+
+5,032,989
+
+13
+
+work conditions such as busy signal or no answer, a
+connection error is indicated at block 162 and process-
+ing continues by displaying a connection error message
+at block 163 and terminating at stop block 172. Pro-
+vided that the connection has occurred successfully as
+determined at decision 160, operation 166 the remote
+system uploads the request to the host using an
+XMODEM protocol and waits for the request to be
+processed in block 167. After host processing, the re-
+mote system downloads the response file from the host
+in block 169. The XMODEM protocol is used for all
+transmission from the remote system 100 to host system
+200 and assures integrity of transmitted and received
+data.
+
+The contents of BUTYEL.DAT are transmitted to
+the host processor with XMODEM and after process-
+ing results are returned to the remote system with
+XMODEM.
+
+Referring now to the processes and systems compris-
+ing host system 200, maintain database processing 210
+shown in FIG. 9 commences at start block 212 and first
+queues for deletion property listings whose time in the
+database has expired as indicated by explicit orders to
+remove or an expiration indicated from the seller ac-
+count file at 214. At block 216 the changes to current
+records in the database are processed by update. This
+process includes a verification of the presence of a re-
+cord for the property in the database, a queuing of a
+deletion of that existing record, and a queuing of the
+adding of the updated record for that property. At
+block 218 all new properties are queued for addition to
+the database, and at block 219 the deletions queue and
+then the additions queue are applied to the database in
+order to bring the database up to current daily condi-
+tion. Finally, a statistical analysis and points file genera-
+tion procedure of the newly-updated database is per-
+formed at 220 and processing terminates at stop block
+222,
+
+Referring now to FIG. 10, there is shown a more
+detailed description of the receive buyer’s processing
+request, 230. Processing begins at start block 702 and
+proceeds to block 704, where the variables are initial-
+ized. In block 706, the modem is reset to an operational
+state.
+
+Decision block 708 determines whether a break in
+communications has occurred. If it has, the program is
+terminated in block 710 and processing stops in block
+712. If no break is detected at block 708, processing
+proceeds to block 714, where the communications oper-
+ation parameters are displayed on-screen to the user.
+Processing then proceeds to block 716, where the pro-
+cess request file is downloaded from the remote system
+to the host using XKMODEM.
+
+Decision block 718 determined whether a custom
+Teport request has been entered. If not, processing goes
+to decision block 720, where it is determined whether a
+summary report request has been entered. If not pro-
+cessing proceeds to decision block 722, where it is de-
+termined whether a points file has been requested. If
+not, processing then proceeds to block 724, where, by
+default, it is known that the news file is to be returned to
+the user.
+
+Should decision block 718 determine that a custom
+report has been requested, processing proceeds to block
+726, where the file is stored for batch processing to later
+produce a bound custom report which is then sent to the
+user in block 728. If decision block 720 determines that
+a summary report request has been entered, processing
+
+20
+
+25
+
+30
+
+45
+
+50
+
+55
+
+65
+
+14
+proceeds to block 730, where the database is searched
+for the information necessary to generate the summary
+report, and then the summary report is returned in
+block 732. If decision block 722 determines that a points
+file request has been entered, processing proceeds to
+block 734, where the points file is returned to the user.
+
+Block 736 uploads the files returned in blocks 728 or
+732 or 734 or 724 to the remote system using
+XMODEM.
+
+Referring now to FIG. 11, there is ‘shown a more
+detailed view of block 246 receive file from remote
+system and acknowledge. Processing begins at start
+block 802 and proceeds to decision 804 wherein a car-
+rier detect (CD) is monitored. If no carrier has been
+detected, processing proceeds to block 812 wherein the
+phone line is hung up and the modem is reset for the
+next call. Processing then terminates at block 814. Ifa
+carrier is detected at decision 804, then the modem is
+taken off-hook and ready to receive information. At
+block 806, the user file is downloaded with XMODEM.
+Processing then proceeds to block 808, where the user
+file is processed. Then, at block 810, the results of the
+processing from 808 are uploaded to the user. At block
+812 the phone line is hung up and the modem reset for
+the next call. Processing then terminates at block 814.
+See revised FIG. 10.
+
+Referring now to FIG. 12, there is shown a more
+detailed view of function 260 search database of proper-
+ties. Processing commences at start block 262 and first
+proceeds to operation 264 wherein the database is
+sorted according to the price of properties contained
+therein. At block 266 the first property having the buy-
+ers specified minimum price is located, and at block 268
+a pointer is set to point to that record containing the
+property. At block 270 the last property having the
+buyer specified maximum price is located and at block
+272 a second pointer is set to the record containing that
+property. At block 274 a complete scan of all properties
+between the two pointers is conducted for matching all
+parameters specified by the buyer in the transmitted file.
+At decision block 275, it is determined whether results
+are the same for custom search processing. If customer
+search processing is required, control proceeds to block
+276 where parameters are saved as property custom
+serial numbers. Selected data items are copied to a file
+and at I/O operation 276 the buyer ID for the particular
+search being processed together with the property se-
+rial numbers located during the matching process are
+written to a storage device for further processing. Addi-
+tionally, information extracted from the accounting file.
+containing the buyers name and address information for
+mailing label purposes is written to a storage device for
+further processing.
+
+If custom search processing is not required, control
+proceeds to block 277, where the selected summary
+
+‘data items are stored. Processing then terminates block
+
+278.
+
+Referring now to FIG. 13, there is shown the ac-
+counting function 300 of host system 200. Processing
+begins at start block 302 and proceeds to block 303
+where explicit seller listing account terminations are
+entered into the accounting system. Such terminations
+occur upon the sale of a property, generally, and cause
+the seller to be immediately cleared from the system. At
+block 304 new accounts received are added to the client
+files for both sellers and buyers. At block 306 old ex-
+pired accounts are removed from the client files, both
+for buyers and sellers. At block 308 new cash receipts
+
+5,032,989
+
+15
+
+are entered into the system and at block 310 buyer ac-
+counts are debited according to the number of searches
+and according to the formulas previously described. At
+block 312 seller accounts are charged for the mainte-
+nance of property listings within the database. At block
+314 the accounting files are scanned and statements are
+prepared for transmission to clients. Processing termi-
+nates at block 316.
+
+Further details pertaining to the preferred embodi-
+ment are presented in the Appendix.
+
+Preferably, the present invention may be imple-
+mented on an IBM or compatible personal computer
+system. Assuming sufficient memory and mass storage,
+the host system, seller system and remote system may
+operate on separate computers which communicate via
+the public telephone’ network using conventional
+modems.
+
+The system software used to implement the system
+may include Greenleaf Softwar Communications Li-
+brary MicroSoft MS-DOS 1™, HALOTM graphics,
+and a language compiler such as MicroSoft C, or its
+equivalent.
+
+While the present invention has been described with
+reference to certain specific instances and examples, it
+will be understood by those skilled in the art that these
+are merely illustrative and are in no way intended to
+limit the scope of the invention. The true spirit and
+scope of the invention should therefore be construed
+only by reference to the appended claims.
+
+I claim:
+
+1. A method using a computer for locating available
+real estate properties comprising the steps of:
+
+a) creating a database of the available real estate prop-
+
+erties;
+
+b) displaying a map of a desired geographic area;
+
+c) selecting a first area having boundaries within the
+geographic area;
+
+d) zooming in on the first area of the displayed map to
+about the boundaries of the first area to display a
+higher level of detail than the displayed map;
+
+e) displaying the zoomed first area;
+
+f) selecting a second area having boundaries within
+the zoomed first area;
+
+g) displaying the second area and a plurality of points
+within the second area, each point representing the
+appropriate geographic location of an available
+real estate property; and
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+45
+
+50
+
+55
+
+65
+
+16
+
+h) identifying available real estate properties within
+the database which are located within the second
+area.
+
+2. The method of claim 1 in which step (e) includes
+the further step of printing a report containing the loca-
+tion of the available real estate properties identified
+within the database.
+
+3. The method of claim 2 in which there is included
+the further step of providing additional information
+regarding the features of the available real estate prop-
+erty.
+
+4. The method of claim 1 in which there is included
+the further step of storing the points in a separate points
+file, containing at least the location information of the
+available real estate property.
+
+5. The method of claim 1 wherein steps (d) and (e)
+utilize a pointing device.
+
+6. The method of claim 1 further comprising the steps
+of:
+
+i providing characteristic information of the available
+real estate properties in the database of available
+real estate properties;
+
+j selecting at least one of the characteristics of the
+available real. estate properties; and
+
+k modifying the display of points to represent the
+available real estate properties having the selected
+characteristics.
+
+7. The method of claim 1 wherein the database of the
+available real estate properties created in step (a) in-
+cludes available commercial properties.
+
+8. The method of claim 1 wherein the database of the
+available real estate properties created in step (a) in-
+cludes available residential properties.
+
+9. The method of claim 1 wherein the data base of the
+available real estate properties created in step (a) in-
+cludes available real estate properties for rental pur-
+poses.
+
+10. The method of claim 1 wherein the database of
+the available real estate properties created in step (a)
+includes available real estate properties for lease pur-
+poses.
+
+11. The method of claim 1 wherein the database of
+the available real estate properties created in step (a)
+includes available real estate properties for commercial
+purposes.
+
+12. The method of claim 1 wherein the database of
+the available real estate properties created in step (a)
+includes available real estate properties for residential
+
+purposes.
+* * * * *

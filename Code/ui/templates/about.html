@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PatentNerd</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #f9f9f9;
+        }
+        .about-container {
+            max-width: 800px;
+            width: 100%;
+            text-align: justify;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 80px; /* MATCH HOME PAGE */
+        }
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+        .top-buttons a {
+            text-decoration: none;
+            color: #4CAF50; /* Green color */
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px; /* Add padding for clickable area */
+            border: 1px solid #4CAF50;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #fff; /* White background for button */
+        }
+        .top-buttons a:hover {
+            background-color: #4CAF50; /* Green background on hover */
+            color: white; /* White text on hover */
+        }
+        h2 {
+            color: #333;
+        }
+        .how-it-works, .meet-the-team {
+            margin-bottom: 30px;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .team-member img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .team-member h4 {
+            margin: 0;
+        }
+        .team-member p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .disclaimer {
+            font-style: italic;
+            color: #888888; /* Light grey */
+        }
+    </style>
+</head>
+<body>
+    <!-- Top-center buttons -->
+    <div class="top-buttons">
+        <a href="/">Home</a>
+    </div>
+
+    <div class="about-container">
+        <h2>About PatentNerd</h2>
+        
+        <div class="how-it-works">
+            <h3>How It Works</h3>
+            <p>
+                The process is simple: first, you will upload a PDF version of your patent draft to the PatentNerd tool. PatentNerd will then use LLMs to evaluate whether your patent's claims are fully supported by its body, a common sticking point in court cases. PatentNerd focuses on clarity and claim support, and in addition to flagging ambiguous sections of your patent, will suggest terms that remain consistent with the patent body, making claims more robust. PatentNerd will both find problems and suggest solutions!
+            </p>
+            <p>
+                With this tool, we aim to make it easier for you to understand potential issues in your patent draft to fix before submitting your final draft.
+            </p>
+            <p class="disclaimer">
+                *PatentNerd is a research tool and is not intended to substitute for professional legal advice. We recommend seeking professional legal advice before submitting a patent.
+            </p>
+            <p>
+                <a class="find-lawyer" href="https://www.google.com/search?q=lawyers+near+me&oq=lawyers+near+me&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORixAxjJAxiABDINCAEQABiSAxiABBiKBTINCAIQABiSAxiABBiKBTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDUwMDJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">Find a lawyer near you</a>
+            </p>
+        </div>
+
+        <div class="meet-the-team">
+            <h3>Meet the Team</h3>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='yuge-duan.jpg') }}" alt = "Yuge Duan">
+                <div>
+                    <h4>Yuge Duan</h4>
+                    <p>Project Lead</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename = 'abby-beckler.jpg') }}" alt = "Abby Beckler">
+                <div>
+                    <h4>Abby Beckler</h4>
+                    <p>Developer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename = 'dennis-shasha.jpg') }}" alt = "Dennis Shasha">
+                <div>
+                    <h4>Dennis Shasha</h4>
+                    <p>Mentor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
