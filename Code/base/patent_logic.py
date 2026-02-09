@@ -2,6 +2,7 @@ import pickle
 import openai
 import os
 import json
+import time
 from Code.base.openai_prompts import PROMPTS
 
 # ✅ masked: avoid KeyError at import time; keep behavior otherwise
@@ -41,6 +42,7 @@ def analyze_claims(claims_text, model, role, api_base, api_key, temperature, top
                 max_tokens=max_tokens,
             )
             results[prompt_name] = response.choices[0].message.content
+            time.sleep(1)
 
         except Exception as e:
             results[prompt_name] = f"Error: {e}"
