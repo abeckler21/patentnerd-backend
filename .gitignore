@@ -1,0 +1,25 @@
+# Environment
+.env
+.env.*
+
+# Uploads (user data, not for version control)
+uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pycache
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+*.egg
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
